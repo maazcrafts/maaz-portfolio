@@ -1627,20 +1627,16 @@ display:flex;
 
 align-items:center;
 
-gap:18px;
+gap:16px;
 
 }
 
 .menu-btn{
+    display:block;
+}
 
-display:none;
-
-font-size:24px;
-
-cursor:pointer;
-
-color:var(--text);
-
+.theme-btn{
+    display:flex;
 }
 
 @media (max-width:768px){

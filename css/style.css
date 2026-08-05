@@ -1697,3 +1697,8 @@ body.light-mode{
 body{
     transition:background .3s,color .3s;
 }
+
+.theme-btn{
+    position: relative;
+    z-index: 9999;
+}

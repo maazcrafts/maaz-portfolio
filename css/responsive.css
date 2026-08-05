@@ -1,0 +1,47 @@
+/* Responsive portfolio styles */
+@media(max-width:1000px){
+
+.hero{
+
+flex-direction:column;
+
+justify-content:center;
+
+text-align:center;
+
+gap:60px;
+
+}
+
+.hero-left,
+.hero-right{
+
+width:100%;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.socials{
+
+justify-content:center;
+
+}
+
+.hero h1{
+
+font-size:55px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+}

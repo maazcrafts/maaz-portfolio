@@ -1574,12 +1574,13 @@ header{
     line-height:1.1;
 }
 
-.hero-image{
+.hero-right{
     order:-1;
 }
 
-.hero-image img{
+.hero-photo{
     width:280px;
+    margin:auto;
 }
 }
 
@@ -1632,7 +1633,10 @@ gap:16px;
 }
 
 .menu-btn{
-    display:block;
+    display:none;
+    font-size:24px;
+    cursor:pointer;
+    color:var(--text);
 }
 
 .theme-btn{
@@ -1640,8 +1644,10 @@ gap:16px;
 }
 
 @media (max-width:768px){
+    .menu-btn{
+    display:block;
+}
 
-@media (max-width:768px){
 
 .nav-links{
     position:absolute;
@@ -1667,7 +1673,7 @@ gap:16px;
 }
 
 }
-}
+
 
 body.light-mode{
 
@@ -1683,4 +1689,15 @@ body.light-mode{
 
     --border:rgba(0,0,0,.08);
 
+}
+
+body.light-mode{
+
+    background:#f8fafc;
+    color:#111827;
+
+}
+
+body{
+    transition:background .3s,color .3s;
 }

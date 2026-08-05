@@ -1668,3 +1668,19 @@ gap:16px;
 
 }
 }
+
+body.light-mode{
+
+    --bg:#f8fafc;
+    --card:#ffffff;
+    --card-2:#eef2ff;
+
+    --text:#111827;
+    --text-light:#4b5563;
+
+    --primary:#2563eb;
+    --primary-hover:#1d4ed8;
+
+    --border:rgba(0,0,0,.08);
+
+}

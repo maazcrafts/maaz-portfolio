@@ -1357,37 +1357,35 @@ header{
 
 }
 
-@media(max-width:900px){
+@media (max-width: 768px){
 
-    .contact-container{
-
-    display:grid;
-
-    grid-template-columns:0.9fr 1.1fr;
-
-    gap:90px;
-
-    align-items:center;
-
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
-    .contact-info{
+.contact-info{
+    width: 100%;
+}
 
-        text-align:center;
+.contact-form{
+    width: 100%;
+}
 
-    }
+.contact-form input,
+.contact-form textarea,
+.contact-form button{
+    width: 100%;
+}
 
-    .contact-info p{
+.contact-form textarea{
+    min-height: 180px;
+}
 
-        margin:auto auto 35px;
-
-    }
-
-    .contact-item{
-
-        justify-content:center;
-
-    }
+.contact-item{
+    justify-content: flex-start;
+}
 
 }
 

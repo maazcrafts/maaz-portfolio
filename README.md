@@ -118,7 +118,7 @@ https://maazcrafts.github.io/r-p-s/
 
 ## 📸 Portfolio Preview
 
-> Add a screenshot of your homepage here.
+![Portfolio Preview](portfolio-preview.png)
 
 Example:
 

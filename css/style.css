@@ -83,11 +83,14 @@ header{
 }
 
 .navbar{
-    position:relative;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 25px;
+}
+
+.nav-links{
+    display:flex;
+    gap:50px;
 }
 
 

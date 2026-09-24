@@ -1,47 +1,9 @@
-/* Responsive portfolio styles */
-@media(max-width:1000px){
+@media(max-width:800px){.container{width:min(100% - 30px,620px)}.nav{height:68px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:15px;flex-direction:column;gap:0}.nav-links.open{display:flex}.nav-links a{padding:13px 0}.nav-resume{padding:10px 12px!important;text-align:center}.hero{min-height:auto;grid-template-columns:1fr;gap:45px;padding-block:70px}.hero h1{font-size:55px}.hero-text{font-size:16px}.hero-visual{justify-content:flex-start}.portrait-card{height:470px;width:100%}.portrait-card img{width:95%;height:92%}.work,.about,.skills,.contact{padding-block:80px}.section-heading{margin-bottom:42px}.featured-project,.project-row,.project-row.reverse,.about-grid,.contact-wrap{grid-template-columns:1fr;gap:35px}.featured-project{margin-bottom:75px}.project-row.reverse .project-image{order:0}.project-row .project-copy h3{font-size:34px}.aerio-preview{min-height:360px}.aerio-body{grid-template-columns:145px 1fr;height:302px}.aerio-body aside{padding:15px 10px}.chat-item{padding:8px 6px}.small-grid{grid-template-columns:1fr}.about-grid{gap:50px}.large-copy{font-size:29px}.toolkit-group{grid-template-columns:1fr;gap:15px}.tool-list{gap:8px}.tool{min-width:105px}.contact-wrap{gap:45px;padding-block:55px}.contact-socials{flex-wrap:wrap;gap:18px}.social-row{grid-template-columns:1fr}.footer{flex-direction:column;gap:7px}.hero-meta{flex-wrap:wrap}}
+@media(max-width:520px){.hero h1{font-size:49px}.portrait-card{height:420px}.portrait-card:before{width:250px;height:250px;top:70px}.aerio-body{grid-template-columns:1fr}.aerio-body aside{display:none}.aerio-preview{min-height:310px}.aerio-body{height:310px}.email-link strong{font-size:16px}.social-row{gap:0}}
 
-.hero{
-
-flex-direction:column;
-
-justify-content:center;
-
-text-align:center;
-
-gap:60px;
-
-}
-
-.hero-left,
-.hero-right{
-
-width:100%;
-
-}
-
-.hero-buttons{
-
-justify-content:center;
-
-}
-
-.socials{
-
-justify-content:center;
-
-}
-
-.hero h1{
-
-font-size:55px;
-
-}
-
-nav ul{
-
-display:none;
-
-}
-
+@media (max-width: 760px){
+  .hero-art{height:430px}
+  .hero-mk{font-size:205px}
+  .hero-art-side{right:16px}
+  .hero-art-caption{left:18px;bottom:28px}
 }

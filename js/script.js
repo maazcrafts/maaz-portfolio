@@ -28,7 +28,7 @@ if (contactForm) {
     const email = document.getElementById('contact-email').value.trim();
     const message = document.getElementById('contact-message').value.trim();
     const subject = encodeURIComponent(`Portfolio message from ${name}`);
-    const body = encodeURIComponent(`Hi Maaz,\\n\\n${message}\\n\\nName: ${name}\\nEmail: ${email}`);
+    const body = encodeURIComponent(`Hi Maaz,\n\n${message}\n\nName: ${name}\nEmail: ${email}`);
     window.location.href = `mailto:maazsabirkhan@gmail.com?subject=${subject}&body=${body}`;
   });
 }
@@ -133,23 +133,23 @@ function buildResumePdf() {
     3: '<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>',
     4: '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>',
     5: '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>',
-    6: `<< /Length ${stream.length} >>\\nstream\\n${stream}\\nendstream`
+    6: `<< /Length ${stream.length} >>\nstream\n${stream}\nendstream`
   };
 
-  let pdf = '%PDF-1.4\\n';
+  let pdf = '%PDF-1.4\n';
   const offsets = {};
 
   for (let i = 1; i <= 6; i++) {
     offsets[i] = pdf.length;
-    pdf += `${i} 0 obj\\n${objects[i]}\\nendobj\\n`;
+    pdf += `${i} 0 obj\n${objects[i]}\nendobj\n`;
   }
 
   const xref = pdf.length;
-  pdf += 'xref\\n0 7\\n0000000000 65535 f \\n';
+  pdf += 'xref\n0 7\n0000000000 65535 f \n';
   for (let i = 1; i <= 6; i++) {
-    pdf += String(offsets[i]).padStart(10, '0') + ' 00000 n \\n';
+    pdf += String(offsets[i]).padStart(10, '0') + ' 00000 n \n';
   }
-  pdf += `trailer\\n<< /Size 7 /Root 1 0 R >>\\nstartxref\\n${xref}\\n%%EOF\\n`;
+  pdf += `trailer\n<< /Size 7 /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF\n`;
 
   return new Blob([pdf], { type: 'application/pdf' });
 }

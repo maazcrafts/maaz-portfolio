@@ -30,3 +30,4 @@ body.resume-modal-open{overflow:hidden}
 .resume-modal-bottom{align-items:flex-start;flex-direction:column}
 .resume-modal-bottom .button{width:100%}
 }
+.small-project-links{display:flex;gap:16px;margin-top:12px;padding:0!important}.small-project-links a{font-size:11px;font-weight:700;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px;transition:opacity .2s ease}.small-project-links a:hover{opacity:.55}

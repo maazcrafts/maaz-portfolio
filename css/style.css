@@ -8,18 +8,18 @@ section{scroll-margin-top:95px}.work{padding-block:110px}.section-heading{max-wi
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}.delay-1{transition-delay:.12s}@keyframes messageIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.aerio-preview,.project-image,.small-card,.tool,.button{transition:none}.bubble{animation:none}}
 
-.resume-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:24px}
+.resume-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:18px}
 .resume-modal.open{display:flex}
 .resume-modal-backdrop{position:absolute;inset:0;background:rgba(18,18,18,.68);backdrop-filter:blur(5px)}
-.resume-modal-card{position:relative;z-index:1;width:min(860px,94vw);height:min(88vh,900px);background:#f4f3ef;border:1px solid rgba(255,255,255,.25);border-radius:10px;box-shadow:0 30px 90px rgba(0,0,0,.3);display:flex;flex-direction:column;overflow:hidden;animation:resumeModalIn .22s ease}
+.resume-modal-card{position:relative;z-index:1;width:min(1080px,96vw);height:min(94vh,980px);background:#f4f3ef;border:1px solid rgba(255,255,255,.25);border-radius:10px;box-shadow:0 30px 90px rgba(0,0,0,.3);display:flex;flex-direction:column;overflow:hidden;animation:resumeModalIn .22s ease}
 .resume-modal-top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px 18px;border-bottom:1px solid var(--line);background:var(--paper)}
 .resume-modal-top .eyebrow{margin:0 0 2px}
 .resume-modal-top strong{font-family:var(--display);font-size:14px}
 .resume-modal-close{width:34px;height:34px;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--ink);font-size:24px;line-height:1;cursor:pointer;display:grid;place-items:center;transition:background .2s ease,transform .2s ease}
 .resume-modal-close:hover{background:#fff;transform:rotate(4deg)}
-.resume-modal-viewer{flex:1;min-height:0;background:#303030;padding:12px}
-.resume-modal-viewer iframe{display:block;width:100%;height:100%;border:0;background:#fff;border-radius:4px}
-.resume-modal-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:13px 18px;border-top:1px solid var(--line);background:var(--paper)}
+.resume-modal-viewer{flex:1;min-height:0;background:#303030;padding:10px;overflow:auto}
+.resume-modal-viewer iframe{display:block;width:100%;height:100%;min-height:760px;border:0;background:#fff;border-radius:4px}
+.resume-modal-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 18px;border-top:1px solid var(--line);background:var(--paper)}
 .resume-modal-bottom span{font-size:11px;color:var(--muted)}
 @keyframes resumeModalIn{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:none}}
 body.resume-modal-open{overflow:hidden}

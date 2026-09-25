@@ -22,6 +22,50 @@ const resumeModal = document.getElementById('resume-preview');
 const resumeOpeners = document.querySelectorAll('[data-resume-preview]');
 const resumeClosers = document.querySelectorAll('[data-resume-close]');
 const resumeDownloadLink = document.querySelector('[data-resume-download-link]');
+let resumePdfLoaded = false;
+
+function loadPdfJs() {
+  return new Promise((resolve, reject) => {
+    if (window.pdfjsLib) return resolve(window.pdfjsLib);
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs';
+    script.type = 'module';
+    script.onload = () => {
+      setTimeout(() => window.pdfjsLib ? resolve(window.pdfjsLib) : reject(new Error('PDF.js failed to load')), 50);
+    };
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+}
+
+async function renderResumePreview() {
+  if (resumePdfLoaded) return;
+  const canvas = document.getElementById('resume-pdf-canvas');
+  if (!canvas) return;
+  try {
+    const pdfjs = await loadPdfJs();
+    pdfjs.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs';
+    const pdf = await pdfjs.getDocument('assets/KHAN%20MAAZ%20RESUME.pdf').promise;
+    const page = await pdf.getPage(1);
+    const container = document.querySelector('.resume-pdf-page');
+    const baseViewport = page.getViewport({ scale: 1 });
+    const scale = Math.max(1, container.clientWidth / baseViewport.width);
+    const viewport = page.getViewport({ scale });
+    const outputScale = window.devicePixelRatio || 1;
+    canvas.width = Math.floor(viewport.width * outputScale);
+    canvas.height = Math.floor(viewport.height * outputScale);
+    canvas.style.width = viewport.width + 'px';
+    canvas.style.height = viewport.height + 'px';
+    await page.render({
+      canvasContext: canvas.getContext('2d'),
+      viewport,
+      transform: outputScale !== 1 ? [outputScale, 0, 0, outputScale, 0, 0] : null
+    }).promise;
+    resumePdfLoaded = true;
+  } catch (error) {
+    console.error('Resume preview failed:', error);
+  }
+}
 
 function openResumePreview(event) {
   if (event) event.preventDefault();
@@ -29,6 +73,7 @@ function openResumePreview(event) {
   resumeModal.classList.add('open');
   resumeModal.setAttribute('aria-hidden', 'false');
   document.body.classList.add('resume-modal-open');
+  requestAnimationFrame(renderResumePreview);
 }
 
 function closeResumePreview() {
@@ -42,19 +87,14 @@ resumeOpeners.forEach(link => link.addEventListener('click', openResumePreview))
 resumeClosers.forEach(button => button.addEventListener('click', closeResumePreview));
 
 if (resumeDownloadLink) {
-  resumeDownloadLink.addEventListener('click', () => {
-    closeResumePreview();
-  });
+  resumeDownloadLink.addEventListener('click', closeResumePreview);
 }
 
 if (resumeModal) {
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && resumeModal.classList.contains('open')) {
-      closeResumePreview();
-    }
+    if (event.key === 'Escape' && resumeModal.classList.contains('open')) closeResumePreview();
   });
 }
-
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 

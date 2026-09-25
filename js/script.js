@@ -17,6 +17,44 @@ document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener(
   }
 }));
 
+
+const resumeModal = document.getElementById('resume-preview');
+const resumeOpeners = document.querySelectorAll('[data-resume-preview]');
+const resumeClosers = document.querySelectorAll('[data-resume-close]');
+const resumeDownloadLink = document.querySelector('[data-resume-download-link]');
+
+function openResumePreview(event) {
+  if (event) event.preventDefault();
+  if (!resumeModal) return;
+  resumeModal.classList.add('open');
+  resumeModal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('resume-modal-open');
+}
+
+function closeResumePreview() {
+  if (!resumeModal) return;
+  resumeModal.classList.remove('open');
+  resumeModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('resume-modal-open');
+}
+
+resumeOpeners.forEach(link => link.addEventListener('click', openResumePreview));
+resumeClosers.forEach(button => button.addEventListener('click', closeResumePreview));
+
+if (resumeDownloadLink) {
+  resumeDownloadLink.addEventListener('click', () => {
+    closeResumePreview();
+  });
+}
+
+if (resumeModal) {
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && resumeModal.classList.contains('open')) {
+      closeResumePreview();
+    }
+  });
+}
+
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 

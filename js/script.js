@@ -24,18 +24,12 @@ const resumeClosers = document.querySelectorAll('[data-resume-close]');
 const resumeDownloadLink = document.querySelector('[data-resume-download-link]');
 let resumePdfLoaded = false;
 
+let pdfJsPromise;
 function loadPdfJs() {
-  return new Promise((resolve, reject) => {
-    if (window.pdfjsLib) return resolve(window.pdfjsLib);
-    const script = document.createElement('script');
-    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs';
-    script.type = 'module';
-    script.onload = () => {
-      setTimeout(() => window.pdfjsLib ? resolve(window.pdfjsLib) : reject(new Error('PDF.js failed to load')), 50);
-    };
-    script.onerror = reject;
-    document.head.appendChild(script);
-  });
+  if (!pdfJsPromise) {
+    pdfJsPromise = import('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs');
+  }
+  return pdfJsPromise;
 }
 
 async function renderResumePreview() {

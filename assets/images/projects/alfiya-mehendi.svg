@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Alfiya Mehendi service booking platform preview</title>
+  <desc id="desc">A warm cream and mehendi-green dashboard preview showing service booking and customer information.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8f1df"/>
+      <stop offset="1" stop-color="#e8dfc7"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#304d3c"/>
+      <stop offset="1" stop-color="#173125"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" rx="34" fill="url(#bg)"/>
+  <rect x="58" y="48" width="1084" height="664" rx="26" fill="#fffdf7" stroke="#d9cfb7" stroke-width="2"/>
+  <rect x="58" y="48" width="1084" height="78" rx="26" fill="#fbf7ed"/>
+  <circle cx="102" cy="87" r="18" fill="#304d3c"/>
+  <path d="M94 87c8-16 17-8 17 2 0 11-11 19-17 20" fill="none" stroke="#fffdf7" stroke-width="3"/>
+  <text x="132" y="94" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#24352c">Alfiya Mehendi</text>
+  <text x="880" y="91" font-family="Arial, sans-serif" font-size="14" fill="#6b746d">SERVICES</text>
+  <text x="978" y="91" font-family="Arial, sans-serif" font-size="14" fill="#6b746d">BOOKING</text>
+  <rect x="1055" y="68" width="58" height="38" rx="19" fill="#304d3c"/>
+  <circle cx="1084" cy="87" r="9" fill="#d8c6a0"/>
+  <rect x="94" y="158" width="1012" height="206" rx="22" fill="url(#hero)"/>
+  <text x="132" y="207" font-family="Arial, sans-serif" font-size="14" letter-spacing="2" fill="#d8c6a0">PROFESSIONAL MEHENDI SERVICES</text>
+  <text x="132" y="255" font-family="Georgia, serif" font-size="40" font-weight="700" fill="#fffdf7">Book your mehendi</text>
+  <text x="132" y="300" font-family="Georgia, serif" font-size="40" font-weight="700" fill="#fffdf7">for every occasion.</text>
+  <rect x="132" y="322" width="174" height="26" rx="13" fill="#d8c6a0"/>
+  <text x="151" y="340" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#24352c">VIEW SERVICES →</text>
+  <circle cx="918" cy="261" r="91" fill="#d8c6a0" opacity=".2"/>
+  <path d="M866 284c34-66 96-76 126-37-18 49-55 78-126 37Z" fill="none" stroke="#d8c6a0" stroke-width="5"/>
+  <path d="M884 286c22-29 45-49 73-62" fill="none" stroke="#d8c6a0" stroke-width="4"/>
+  <rect x="94" y="392" width="315" height="278" rx="20" fill="#f8f3e8" stroke="#e2d8c4"/>
+  <text x="120" y="430" font-family="Arial, sans-serif" font-size="12" letter-spacing="1.5" fill="#7a817b">SERVICES</text>
+  <text x="120" y="465" font-family="Georgia, serif" font-size="25" font-weight="700" fill="#24352c">Bridal Mehendi</text>
+  <text x="120" y="491" font-family="Arial, sans-serif" font-size="14" fill="#6d756e">Full length · Advanced</text>
+  <text x="120" y="530" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#304d3c">₹1,649</text>
+  <rect x="120" y="560" width="254" height="48" rx="12" fill="#304d3c"/>
+  <text x="196" y="590" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#fffdf7">BOOK SERVICE</text>
+  <text x="120" y="637" font-family="Arial, sans-serif" font-size="12" fill="#7a817b">Real-time appointment availability</text>
+  <rect x="430" y="392" width="676" height="278" rx="20" fill="#fffdf7" stroke="#e2d8c4"/>
+  <text x="460" y="430" font-family="Arial, sans-serif" font-size="12" letter-spacing="1.5" fill="#7a817b">ADMIN BOOKING VIEW</text>
+  <text x="460" y="465" font-family="Georgia, serif" font-size="25" font-weight="700" fill="#24352c">Customer contact</text>
+  <rect x="460" y="490" width="292" height="62" rx="12" fill="#f8f3e8"/>
+  <text x="478" y="514" font-family="Arial, sans-serif" font-size="11" fill="#7a817b">CUSTOMER</text>
+  <text x="478" y="537" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#24352c">Name · Email · Phone</text>
+  <rect x="770" y="490" width="302" height="62" rx="12" fill="#f8f3e8"/>
+  <text x="788" y="514" font-family="Arial, sans-serif" font-size="11" fill="#7a817b">APPOINTMENT</text>
+  <text x="788" y="537" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#24352c">Date · Time · Location</text>
+  <rect x="460" y="570" width="612" height="54" rx="12" fill="#304d3c"/>
+  <text x="488" y="603" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#fffdf7">CONFIRMED</text>
+  <text x="890" y="603" font-family="Arial, sans-serif" font-size="14" fill="#d8c6a0">Manage booking →</text>
+</svg>
